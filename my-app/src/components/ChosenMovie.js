@@ -60,7 +60,7 @@ class ChosenMovie extends React.Component {
 										className = "movieplot">{this.state.movieData[this.state.page].plot}
 									</div>
 								</div>
-								<a href = {"https://www.imdb.com/title/" + this.state.movieData[this.state.page].imdb_id}>Mais informações</a>
+								<a href = {"https://www.imdb.com/title/" + this.state.movieData[this.state.page].imdb_id}>Read more</a>
 							</div>
 						</div>
 						<button class="hoverable" onClick = {this.handleChange}>Próximo </button>

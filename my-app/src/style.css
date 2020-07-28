@@ -5,6 +5,7 @@ a{
   color: #e4cb58;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
+  padding-bottom: 20px;
 }
 
 header{
@@ -117,6 +118,7 @@ form{
   font-weight:400;
   text-align:left;
   font-size:35px;
+  padding-top: 20px;
   letter-spacing:1px;
   text-transform: uppercase;
 }
