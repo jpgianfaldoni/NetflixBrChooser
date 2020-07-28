@@ -14,7 +14,7 @@ class Type extends React.Component {
 
     render(){
 		return(
-            <div>
+            <div className = "teste">
                 <h1>Quer assistir um <code>filme </code> ou uma <code>série</code>?</h1>
                 <button class="hoverable" value ="movie" onClick = {(e) => this.props.handleChange(e, "type")}>Filme</button>
                 <button class="hoverable" value ="series" onClick = {(e) => this.props.handleChange(e, "type")}>Série</button>

@@ -1,7 +1,18 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+a{
+  text-decoration: none;
+  color: #e4cb58;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
 
-
+header{
+  align-self: start;
+  display:flex;
+  padding-left: 50px;
+  font-size: 50px;
+}
 
 ul{
   list-style-type:none;
@@ -25,9 +36,7 @@ body {
   color: rgba(255, 255, 255, 0.658);
   background: hsl(227, 10%, 10%);
   font: 300 1em 'Fira Sans', sans-serif;
-  
   justify-content: center;
-  align-content: center;
   align-items: center;
   text-align: center;
   min-height: 700px;
@@ -37,12 +46,12 @@ body {
 button {
   background: none;
   border: 3px solid;
-  font: inherit;
-  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
   margin: 0.5em;
-  padding: 1em 2em;
+  padding: 1em 1em;
   color: #e9e6d7;
   font-size: medium;
+  text-align: center;
   width: 150px;
   border-radius: 8px;
 }
@@ -77,10 +86,9 @@ form{
 
 .buttons{
   display: flex;
+  width: 600px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 800px;
-  margin-right: 800px;
 }
 
 
@@ -91,14 +99,17 @@ form{
 
 .moviecardinfo{
   background-color: black;
+  display: flex;
+  flex-direction: column;
   color: white;
   text-align: left;
-  width: 500px;
+  width: 550px;
   padding-left: 40px;
   padding-right: 40px;
-  padding-top: 20px;
-  display: block;
   height: 400px;
+  bottom: 0;
+  justify-content: space-between;
+  height: 420px;
 }
 .movietitle{
   color:white;
@@ -110,11 +121,11 @@ form{
   text-transform: uppercase;
 }
 .movieplot{
-  padding-top: 5px;
   font-size:20px;
   font-weight:400;
   font-family: 'Montserrat', sans-serif;
   color:white;
+  max-height: 100px;
 }
 .hoverable:hover {
   background: rgba(255, 255, 255, 0.274);
@@ -129,3 +140,25 @@ form{
 .montserrat{font-family: 'Montserrat'}
 
 .bold{font-weight: 700;}
+
+
+.backbutton{
+  border-color: rgba(255, 255, 255, 0.589);
+  border: solid;
+  color: #e9e6d7;
+}
+
+.backbutton:hover {
+  transform: scale(1.07);
+  background: rgba(255, 255, 255, 0.274);
+
+}
+
+element:hover {
+  transform: scale(1.07);
+  cursor: default;
+}
+
+a:hover{
+  color: #e4ca588a;
+}

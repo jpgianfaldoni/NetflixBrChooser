@@ -20,6 +20,9 @@ class Language extends React.Component {
     render(){
 		return(
             <div>
+                <header>
+                    <element onClick = {this.props.backButton}>&#x21e6;</element>
+                </header>
                 <h1>Escolha o <code>idioma</code> que quer assistir</h1>
                 <div className = "buttons">
                     <button class="hoverable" value ="" onClick = {(e) => this.props.handleChange(e, "language")}>Tanto faz</button>

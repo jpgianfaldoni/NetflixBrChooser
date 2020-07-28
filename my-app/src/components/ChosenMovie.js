@@ -36,6 +36,7 @@ class ChosenMovie extends React.Component {
 	}
 
     render(){
+		console.log(this.state)
 		return(
             <div>
                     {
@@ -47,14 +48,19 @@ class ChosenMovie extends React.Component {
 								<img src = {this.state.movieData[this.state.page].poster} height = "420" width = "300"/>
 							</div>
 							<div className = "moviecardinfo">
-								<div className = "movietitle">{this.state.movieData[this.state.page].name}</div>
-								<ul>
-									<li> <code>{this.state.movieData[this.state.page].release_year}</code></li>
-									<li> <code> {parseFloat(this.state.movieData[this.state.page].imdb_score)}</code></li>
-									<li> <code>{this.state.movieData[this.state.page].genre}</code></li>
-								</ul>
-								<Startest rating = {parseFloat(this.state.movieData[this.state.page].imdb_score)} />
-								<div className = "movieplot">{this.state.movieData[this.state.page].plot}</div>
+								<div>
+									<div className = "movietitle">{this.state.movieData[this.state.page].name}</div>
+									<ul>
+										<li> <code>{this.state.movieData[this.state.page].release_year}</code></li>
+										<li> <code> {parseFloat(this.state.movieData[this.state.page].imdb_score)}</code></li>
+										<li> <code>{this.state.movieData[this.state.page].genre}</code></li>
+									</ul>
+									<Startest rating = {parseFloat(this.state.movieData[this.state.page].imdb_score)} />
+									<div 
+										className = "movieplot">{this.state.movieData[this.state.page].plot}
+									</div>
+								</div>
+								<a href = {"https://www.imdb.com/title/" + this.state.movieData[this.state.page].imdb_id}>Mais informações</a>
 							</div>
 						</div>
 						<button class="hoverable" onClick = {this.handleChange}>Próximo </button>

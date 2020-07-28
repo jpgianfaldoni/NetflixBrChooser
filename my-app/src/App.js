@@ -24,6 +24,7 @@ class App extends React.Component {
 			page: 0,
 		}
 		this.handleChange = this.handleChange.bind(this)
+		this.backButton = this.backButton.bind(this)
 		this.handleSubmitActor = this.handleSubmitActor.bind(this)
 	}
 
@@ -48,13 +49,20 @@ class App extends React.Component {
 		})
 	}
 
+	backButton(event){
+		event.preventDefault()
+		this.setState({
+			page: this.state.page - 1
+		})
+	}
+
+
 
 
 	
 	render(){
-		console.log(this.state)
 			return(
-			<div className = "teste">
+			<div>
 				{
 					this.state.loading ? <h1>Loading</h1> :
 					this.state.page == 0 ?
@@ -62,10 +70,10 @@ class App extends React.Component {
                     <Type handleChange = {this.handleChange}/>
 				</div>: this.state.page == 1 ?
 				<div >
-					<Genre genreList = {this.state.genreList} handleChange = {this.handleChange}/>
+					<Genre genreList = {this.state.genreList} handleChange = {this.handleChange} backButton = {this.backButton}/>
 				</div>: this.state.page == 2?
 				<div>
-					<Language handleChange = {this.handleChange}/>
+					<Language handleChange = {this.handleChange} backButton = {this.backButton}/>
 				</div>:this.state.page != "actor"?
 				<div>
 					<Actor topText = {this.state.topText} handleSubmitActor = {this.handleSubmitActor} handleChange = {this.handleChange}/>
