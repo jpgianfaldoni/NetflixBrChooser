@@ -51,9 +51,15 @@ class App extends React.Component {
 
 	backButton(event){
 		event.preventDefault()
-		this.setState({
-			page: this.state.page - 1
-		})
+		if(this.state.page =! "actor"){
+			this.setState({
+				page: this.state.page - 1
+			})
+		}else{
+			this.setState({
+				page: 0
+			})
+		}
 	}
 
 
@@ -61,6 +67,7 @@ class App extends React.Component {
 
 	
 	render(){
+			console.log(this.state)
 			return(
 			<div>
 				{
@@ -79,7 +86,7 @@ class App extends React.Component {
 					<Actor topText = {this.state.topText} handleSubmitActor = {this.handleSubmitActor} handleChange = {this.handleChange}/>
 				</div>:
 				<div>
-					<ChosenMovie genre = {this.state.genre} type = {this.state.type} actor = {this.state.actor} language = {this.state.language}/>
+					<ChosenMovie genre = {this.state.genre} type = {this.state.type} actor = {this.state.actor} language = {this.state.language} backButton = {this.backButton}/>
 				</div>
 
 				

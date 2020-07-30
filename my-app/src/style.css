@@ -7,7 +7,17 @@ a{
   font-size: 20px;
   padding-bottom: 20px;
 }
+h1{
+  margin-block-start: 0em;
 
+}
+.a2{
+  text-decoration: none;
+  color: #eb4848fb;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
 header{
   align-self: start;
   display:flex;
@@ -50,7 +60,7 @@ button {
   font-family: 'Montserrat', sans-serif;
   margin: 0.5em;
   padding: 1em 1em;
-  color: #e9e6d7;
+  color: #e9e6d7b6;
   font-size: medium;
   text-align: center;
   width: 150px;
@@ -91,7 +101,6 @@ form{
   flex-wrap: wrap;
   justify-content: center;
 }
-
 
 
 .moviecard{
@@ -163,4 +172,13 @@ element:hover {
 
 a:hover{
   color: #e4ca588a;
+}
+
+.a2:hover{
+  color: #eb484854;
+}
+
+.endbuttons{
+  display:flex;
+  justify-content: space-between;
 }
