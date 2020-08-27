@@ -17,7 +17,7 @@ class Startest extends React.Component {
 			stars = <code>&#x2605;</code>
 		}else if(this.props.rating <= 4){
 			stars = <code>&#x2605; &#x2605;</code>
-		}else if(this.props.rating <= 6){
+		}else if(this.props.rating < 7){
 			stars = <code>&#x2605; &#x2605; &#x2605;</code>
 		}else if(this.props.rating <= 8){
 			stars = <code>&#x2605; &#x2605; &#x2605; &#x2605;</code>
